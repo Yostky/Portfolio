@@ -1,0 +1,733 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Newsreader', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: white;
+}
+
+footer {
+    background-color: rgb(7, 7, 7);
+}
+
+
+.nav_links {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    width: 100%;
+    z-index: 3;
+    border-bottom: solid 4px #007bb5;
+}
+
+nav .ulContainer ul li a.edit{
+    color: #007bb5;
+    transition: all 1.5s;
+}
+
+.navStick {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.fa-bars {
+    height: 40px;
+    font-size: 40px;
+    position: fixed;
+    z-index: 55;
+    right: 5px;
+    top: 4px;
+    color: #007bb5;
+    display: none;
+}
+
+.fa-bars:hover {
+    cursor: pointer;
+}
+/*------------------*/
+.dropdown-content {
+    display: block;
+    background-color: rgb(54, 54, 54);
+    height: 260px;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.dropdown-content a{
+    float: none;
+    text-align: left;
+    padding: 20px 30px;
+    font-size: 25px;
+    display: block;
+    width: 100%;
+    color: #007bb5;
+}
+
+.burgerAnimation {
+    display: none;
+}
+
+/*The z-index needs to be changed, or this header section needs moved*/
+
+.redirects {
+    padding-right: 10px;
+}
+
+.redirects li {
+    font-size: 22px;
+    list-style: none;
+    display: inline-flex;
+    margin: 10px 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.redirects a {
+    color: white;
+    text-decoration: none;
+}
+
+.redirects a::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    display: block;
+    background-color: #007bb5;
+}
+
+.redirects a:hover {
+    cursor: pointer;
+}
+
+.redirects li a:hover::after {
+    width: 100%;
+    transition: .3s;
+}
+/*This section is for the animations*/
+#canvas1 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(gray, black);
+}
+
+.sectioner {
+    padding-right: 5%;
+    padding-left: 5%;
+    width: 100%;
+    position: relative;
+}
+
+.darkH1 {
+    color: black;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 50px;
+    padding: 75px 75px 15px 75px;
+    margin-top: 15%;
+    opacity: 0;
+}
+
+.h1Edit {
+    animation: slide_right .5s ease forwards;
+    opacity: 1;
+}
+
+.border {
+    animation: slide_left .5s ease forwards;
+    animation-delay: .3s;
+    opacity: 1;
+}
+
+.divBar {
+    background-color: black;
+    height: 5px;
+    width: 10%;
+    margin: auto;
+    margin-bottom: 35px;
+    opacity: 0;
+}
+
+p {
+    margin: 20px 40px 10px 40px;
+    color: black;
+
+}
+
+.bio {
+    color: black;
+    margin-top: 5%;
+
+}
+
+.portrait {
+    image-resolution: 100px;
+    padding-top: 20px;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    border: black 2px solid;
+    font-size: 20px;
+    padding: 0 5% 0 5%;
+}
+
+.container h2{
+    margin-top: 10px;
+}
+
+.icons {
+    width: 100%;
+    display: flex;
+}
+
+.icon {
+    margin: auto;
+    text-align: center;
+}
+
+figcaption {
+    color: black;
+    font-size: 30px;
+}
+/******************** Weather App ****************************************************************/
+.weather-app-container {
+    text-align: center;
+    align-content: center;
+    border-radius: 5px;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    height: fit-content ;
+    position: relative;
+    max-width: 100%;
+    
+}
+
+.backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -5;
+    filter: brightness(65%);
+    object-fit: fill;
+}
+
+.current_weather_container {
+    display: flex;
+    padding-top: 45px;
+    grid-column: auto;
+    margin: auto;
+    width: 100%;
+}
+
+.cityName {
+    width: 100%;
+    text-align: left;
+    font-size: 50px;
+    color: white;
+}
+
+.current_date_container{
+    width: 33%;
+    justify-content: left;
+}
+
+.current_date{
+    width: 100%;
+    text-align: left;
+    font-size: 30px;
+    color: white;
+}
+
+.current_weather {
+    width: 80%;
+    color: white;
+    padding: 0 0 20px 0;
+    display: flex;
+}
+
+.current_temp_container {
+    font-size: 90px;
+    width: 100%;
+    padding-right: 80px;
+}
+.moveLeft {
+    padding-right: 20%;
+}
+
+.hourly {
+    width: 100%;
+    text-align: left;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    border-bottom: rgb(211, 211, 211) 1px solid;
+    padding-bottom: 3px;
+}
+
+.daily {
+    width: 100%;
+    text-align: left;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    border-bottom: rgb(211, 211, 211) 1px solid;
+    padding: 20px 0 3px 0;
+}
+
+.current_weather_item{
+    width: 100%;
+    margin: auto;
+}
+
+.current_data {
+    display: table-column;
+    width: 100%;
+    margin: auto;
+}
+
+.current_weather_class {
+    display: row;
+    padding-top: 10px;
+    width: 100%; 
+}
+
+.current_weather_class:first-child {
+    padding-top: 30px;
+}
+
+.weather_class{
+    width: 100px;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.forecast_weather_class{
+    color: white;
+    width: 140px;
+    min-width: 140px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.alignLeft {
+    text-align: left;
+    justify-content: left;
+    left: 0;
+    width: 100%;
+}
+
+.extraPadding {
+    padding-bottom: 20px;
+}
+
+.weather_item {
+    display:table-row;
+}
+
+#description{
+    font-size: 25px;
+    width: 200px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.increaseFont {
+    font-size: 20px;
+}
+
+.increaseTempFont {
+    font-size: 25px;
+}
+
+.decreaseTempFont {
+    padding-top: 1%;
+    margin-top: 15px;
+    color: rgb(216, 215, 215);
+}
+
+.submitDiv {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.weatherSubmit {
+    height: 45px;
+    font-size: 20px;
+    width: 45px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(59, 59, 59);
+    border-left: rgb(0, 255, 13) 2px solid;
+    border-radius: 2px;
+    top: 0px;
+    right: 0px;
+    line-height: 2.2;
+    position: absolute;
+    z-index: 10;
+}
+
+.weatherSubmit:hover {
+    cursor: pointer;
+}
+
+.inputValue{
+    height: 45px;
+    width: 45px;
+    color: white;
+    background-color: rgb(44, 44, 44);
+    font-size: 16px;
+    border: none;
+    opacity: 0.9;
+}
+
+.searchbarAnimation {
+    animation: openSearchBar .65s ease-in forwards;
+}
+
+.inputValue::placeholder{
+    color: white;
+    opacity: 1;
+}
+
+.forecast_weather {
+    display: flex;
+    margin: auto;
+    width: 95%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.top {
+    padding-bottom: 10px;
+}
+
+.top::-webkit-scrollbar{
+    display: none;
+}
+
+.bottom {
+    padding: 0 0 10px 0;
+}
+.weather_image {
+    text-align: left;
+    align-content: center;
+}
+
+.slider_container1, .slider1{
+    height: 130px;
+    overflow: hidden;
+}
+.slider2 {
+    height: 150px;
+}
+.slider_container2 {
+    height: 150px;
+}
+
+.slider1, .slider2, .innerSlider1, .innerSlider2 {
+    position: absolute;
+    touch-action: none;
+}
+
+.innerSlider1, .innerSlider2 {
+    top: 0;
+    left: 0;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.appImg {
+    width: 40%;
+    height: auto;
+    text-align: center;
+}
+/*Footer area*/
+            
+
+#white {
+    color: white;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 50px;
+    padding: 150px 75px 15px 75px;
+    margin-top: 15%;
+    opacity: 0;
+}
+
+#white-bar {
+    background-color: white;
+}
+
+#contact {
+    background-color: #000000;
+}
+
+#container-contact-form {
+    text-align: center;
+    width: 100%;
+    border: black solid 2px;
+}
+
+#container-area {
+   width: 100%;
+   height: 100%;
+   margin: auto auto 30px auto;
+   padding: 0 20% 30px 20%;
+   text-align: left;
+}
+
+#container-area input {
+    margin-bottom: 4px;
+}
+
+.name-email {
+    width: 100%;
+    height: 35px;
+    font-size: 20px;
+    background-color: rgb(8, 8, 17);
+    border: none;
+    color: white;
+    border: #007bb5 2px solid;
+}
+
+#container-area textarea {
+    width: 100%;
+    height: 150px;
+    font-size: 20px;
+    background-color: rgb(8, 8, 17);
+    border: none;
+    color: white;
+    border: #007bb5 2px solid;
+}
+
+input[type=text], textarea[type=text] {
+    padding-left: 5px;
+}
+textarea[type=text] {
+    padding-top: 5px;
+}
+
+#submit {
+    float: right;
+    width: 100px;
+    height: 30px;
+    color: #007bb5;
+    background-color:black;
+    border: #007bb5 2px solid;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #007bb5;
+    border: white 2px solid;
+    color: white;
+}
+
+.button {
+    transition: all .5s;
+}
+
+.socials {
+    text-align: center;
+    color: white;
+}
+
+.socials i {
+    align-content: space-between;
+    margin: 1% 35px 1% 35px;
+    cursor: pointer;
+}
+
+.fa {
+    color: white;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+
+#linkedin {
+    font-size: 30px;
+    padding: 20px;
+    background:rgb(32, 30, 30);
+    border-radius: 50%;
+}
+
+#linkedin:hover {
+    background: #007bb5;
+    transform: scale(1.1);
+}
+
+#github {
+    font-size: 30px;
+    padding: 20px;
+    background: rgb(32, 30, 30);
+    border-radius: 50%;
+}
+
+#github:hover {
+    background-color: #007bb5;
+    transform: scale(1.1);
+    border: #007bb5;
+}
+
+
+@keyframes slide_left {
+    0% {
+        transform: translateX(300px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_right {
+    0% {
+        transform: translateX(-300px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes openSearchBar {
+    0% {
+        width: 45px
+    }
+    100% {
+        width: 300px;
+    }
+}
+/*------------------------------------------------------------------------------*/
+
+
+@media only screen and (max-width: 768px) {
+    .nav_links, #canvas1, .current_weather_class, .hide{
+        display: none;
+    }
+    .fa-bars {
+        display: flex;
+    }
+    
+    /* .weather-app-container {
+        display: none;
+    } */
+    .backgroundVideo {
+        width: 200%;
+    }
+    
+    .current_weather_container {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+    }
+    .current_date_container{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    .cityName h2, .current_date{
+        text-align: center;
+    }
+    .cityName{
+        font-size: 30px;
+    }
+
+    .current_weather, .current_temp_container{
+        width: 100%;
+    }
+    .moveLeft, .current_temp_container{
+        padding: 0;
+    }
+    /*I need to use CSS to restyle the HTML once the screen hits a certain width.
+    I need to make the location, temp, and description to sit ontop of eachother. The current weather 
+    section looks fine, just needs the description removed. The daily section is undecided. I might need to
+    add a button that pops up new html to the screen with the extra weather details (Placed directectly 
+    ontop of the existing app). */
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .current_weather_container {
+        padding-top: 10px;
+    }
+    .current_weather {
+        padding: 0;
+    }
+    .icons, .bottom {
+        display: block
+    }
+    .slider_container1 {
+        height: 90px;
+    }
+    .slider_container2, .slider2{
+        height: 40vh;
+        overflow: scroll;
+
+    }
+    .current_temp_container {
+        font-size: 64px;
+    }
+    .innerSlider2{
+        height: 100%;
+    }
+    .top .forecast_weather_class {
+        padding-right: 65px;
+    }
+    .forecast_weather_class{
+        min-width: 50px;
+    }
+    .alignLeft {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+    .increaseFont{
+        width: 79px;
+    }
+    .weatherDescription {
+        display: none;
+    }
+    .changeIconSize {
+        height: 35px;
+    }
+    .weather_image{
+        width: 35px;
+        height: 35px;
+    }
+    #white, .darkH1 {
+        font-size: 30px;
+    }
+    
+}
+
+/*
+1. restructure the weather app so it looks good on mobile/Tablet (laptop is fine)
+2. Get rid of uneccesary HTML so the Website doesn't have to refresh weird
+3. make the weather app have a default location that it shows (This way there is always something there)
+4. either find a new canvas background or remove it entirely
+5. Try to cache data on the website for better loading of the app itself?
+6. Find some other way to handle loading on the website in terms of the WAPP
+6. Create a slide down animation for the navbar once the hamburger is clicked
+*/
