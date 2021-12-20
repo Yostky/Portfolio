@@ -11,38 +11,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='portfolio.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Kyle's Love Dungeon</title>
+    <title>Kyle's Code</title>
 </head>
 <body>
     <section id='home'>
-        <canvas id='canvas1'></canvas>
+        <header class="home">
+            <nav class='nav_links'>
+                <div class='ulContainer'>
+                    <ul class='redirects'>
+                        <!-- <li><a href='#home' class='home edit'>Home</a></li> -->
+                        <li><a href='#about' class='about'>About</a></li>
+                        <li><a href='#projects' class='projects'>Projects</a></li>
+                        <li><a href='#contact' class='contact'>Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <i class="fas fa-bars"></i>
+            <div class="dropdown">
+                <div class="dropdown-content burgerAnimation">
+                    <!-- <a href="#home" class='home edit dropDownLink1'><b>Home</b></a> -->
+                    <a href="#about" class='about dropDownLink2'><b>About</b></a>
+                    <a href="#projects" class='projects dropDownLink3'><b>Projects</b></a>
+                    <a href="#contact" class='contact dropDownLink4'><b>Contact</b></a>
+                </div>
+            </div> 
+        </header>
     </section>
-    <header class="home">
-        <nav class='nav_links'>
-            <div class='ulContainer'>
-                <ul class='redirects'>
-                    <li><a href='#home' class='home edit'>Home</a></li>
-                    <li><a href='#about' class='about'>About</a></li>
-                    <li><a href='#projects' class='projects'>Projects</a></li>
-                    <li><a href='#contact' class='contact'>Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <i class="fas fa-bars"></i>
-        <div class="dropdown">
-            <div class="dropdown-content burgerAnimation">
-              <a href="#home" class='home edit dropDownLink1'><b>Home</b></a>
-              <a href="#about" class='about dropDownLink2'><b>About</b></a>
-              <a href="#projects" class='projects dropDownLink3'><b>Projects</b></a>
-              <a href="#contact" class='contact dropDownLink4'><b>Contact</b></a>
-            </div>
-          </div> 
-    </header>
     <section id='about' class="sectioner" >
         <div class='about'>
-            <h1 class='about darkH1'>ABOUT ME</h1>
+            <h1 class='about1'>ABOUT ME</h1>
         </div>
-        <div class='divBar about'></div>
+        <div class='aboutDiv'></div>
         <div class='icons'>
             <div class='icon'>
                 <img src="https://img.icons8.com/color/120/000000/html-5--v1.png"/>
@@ -79,7 +78,6 @@
             </div>
         </div>
     </section>
-    <!-- This section is for the aps. I want a quick description of how they work too -->
     <section id="projects" class="projects sectioner">
         <div class='projects'>
             <h1 class='projects darkH1'>PROJECTS</h1>
@@ -215,6 +213,7 @@
                         </div>           
                     </div>
                 </div>
+               
                 <!-------------------------------------------------->
                 <div class='daily'>Daily</div>
                 <div class='slider_container2'>
@@ -308,9 +307,6 @@
                 This project taught me about API calls, event listeners, regular expressions, and how Javascript 
                 is able to manipulate HTML and CSS. Working on this app also taught me the importance of clean code,
                 as I found it very difficult to navigate lines of code that is poorly organized and clumped together.
-                
-                <!-- I wanted to use 100% vanilla Javascript for this project because I wanted to have a solid grasp on 
-                the fundamentals of Javascript before I started learning how to use frameworks such as React or Vue. -->
             </p>
         </div>
     </section>
@@ -335,6 +331,6 @@
             <a href='https://github.com/Yostky'><i href="#" id='github' class="fa fa-github"></i></a>
         </div>
     </footer>
-    <script src="portfolio.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
