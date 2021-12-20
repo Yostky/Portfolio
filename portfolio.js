@@ -49,16 +49,12 @@ window.addEventListener('scroll', ()=> {
 //This section adds and removes animation classes form the hamburger menu
 const hamburger = document.querySelector('.fa-bars');
 const dropDown = document.querySelector('.dropdown-content');
-const dropDownLink1 = document.querySelector('.dropDownLink1');
 const dropDownLink2 = document.querySelector('.dropDownLink2');
 const dropDownLink3 = document.querySelector('.dropDownLink3');
 const dropDownLink4 = document.querySelector('.dropDownLink4');
 hamburger.addEventListener('click', () => {
     dropDown.classList.toggle('burgerAnimation');
 }) 
-dropDownLink1.addEventListener('click', () => {
-    dropDown.classList.toggle('burgerAnimation');
-})
 dropDownLink2.addEventListener('click', () => {
     dropDown.classList.toggle('burgerAnimation');
 })
@@ -108,6 +104,7 @@ const slideUpEnd = () => {
 }
 
 const slideUpMove = (e, slidingDiv)=>{
+    if (screen.width > 480) return;
     if (!pressDown) return;
     e.preventDefault();
     const y = e.pageY - slidingDiv.offsetTop;
@@ -119,6 +116,10 @@ const slideUpMove = (e, slidingDiv)=>{
         window.scrollBy(0, -5);
     }
 }
+///////////////////////////////////////////////////////FIX THE SCROLLBAR/////////////////////////////////////////////////////////
+
+
+
 // element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
 
 /////////////////////////////////////
@@ -136,10 +137,6 @@ slidingDiv1.addEventListener('mousemove', (e)=> {
     slideMove(e, slidingDiv1);
 })
 
-////////////////////////////////////
-// I need to detect the top and bottom of the div, then move the screen 1px. This will call many times
-// resulting in a smooth movement across the page.
-
 ///////////////////////////////////
 slidingDiv1.addEventListener('pointerdown', (e)=> {
     slideStart(e, slidingDiv1); 
@@ -148,8 +145,6 @@ slidingDiv1.addEventListener('pointerup', slideEnd);
 slidingDiv1.addEventListener('pointermove', (e)=> {
     slideMove(e, slidingDiv1);
 })
-
-
 
 ///////////////////////////////////
 
@@ -377,8 +372,8 @@ submit.addEventListener('click', function (e){
 })
 
 window.onload = function() {
-    lat = 51.5074;
-    lon = 0.1278;
+    lat = 45.5152;
+    lon = 122.6784;
     onecall(lat, lon);
     reverseGeocode(lat, lon);
 };
@@ -425,11 +420,8 @@ function reverseGeocode(lat, lon) {
 
 // This takes in the data and displays it
 const showData = (data) => {
-    // let current_date = document.querySelector('.current_date');
     let current_temp = document.querySelector('.current_temp');
     let current_description = document.querySelector('.current_description');
-    // let current_sunset = document.querySelector('.current_sunset');
-    // let current_sunrise = document.querySelector('.current_sunrise');
     let current_humidity = document.querySelector('.current_humidity');
     let current_high = document.querySelector('.current_high');
     let current_low = document.querySelector('.current_low');
@@ -468,23 +460,23 @@ const showData = (data) => {
     //changes the icons depending on the weather conditions
     let iconList = (icon) => {
         if (icon === '01d') {
-            iconSrc = `pictures/003-sun.png`
+            iconSrc = `../pictures/003-sun.png`
         } else if (icon === '01n') {
-            iconSrc = 'pictures/night.png'
+            iconSrc = '../pictures/night.png'
         } else if (icon === '02n' || icon === '03n') {
-            iconSrc = 'pictures/cloudyMoon.png'
+            iconSrc = '../pictures/cloudyMoon.png'
         } else if (icon ==='02d' || icon === '03d') {
-            iconSrc = 'pictures/002-cloudy.png'
+            iconSrc = '../pictures/002-cloudy.png'
         } else if (icon === '09d' || icon === '09n') {
-            iconSrc = 'pictures/001-rain.png'
+            iconSrc = '../pictures/001-rain.png'
         } else if (icon === '10d' || icon === '10n') {
-            iconSrc = `pictures/006-rain.png`
+            iconSrc = `../pictures/006-rain.png`
         } else if (icon === '11d' || icon === '11n') {
-            iconSrc = `pictures/004-storm.png`
+            iconSrc = `../pictures/004-storm.png`
         }  else if (icon === '13d' || icon === '13n') {
-            iconSrc = `pictures/008-snowing.png`
+            iconSrc = `../pictures/008-snowing.png`
         } else {
-            iconSrc = 'pictures/011-clouds.png'
+            iconSrc = '../pictures/011-clouds.png'
         }
     }
     //This is the hourly section
@@ -554,7 +546,6 @@ const showData = (data) => {
     });
     let bottom = document.querySelector('.bottom');
     bottom.innerHTML = dailyForecast;
-    
 }
 // This adds the name of the city to the page
 const nameSpot = (data) => {
@@ -585,35 +576,35 @@ let changeBackground = (currentIcon, description) => {
     const heavyResult = heavyRainTerms.some(term => description.includes(term))
 
     if (currentIcon === '01d') {
-        backgroundVideo.setAttribute('src', 'videos/sunnyDay.mp4');
+        backgroundVideo.setAttribute('src', '../videos/sunnyDay.mp4');
     } else if (currentIcon === '01n') {
-        backgroundVideo.setAttribute('src', 'videos/clearNight.mp4');
+        backgroundVideo.setAttribute('src', '../videos/clearNight.mp4');
     } else if (currentIcon === '02d' || currentIcon === '03d') {
-        backgroundVideo.setAttribute('src', 'videos/lightlyCloudy.mp4');
+        backgroundVideo.setAttribute('src', '../videos/lightlyCloudy.mp4');
     } else if (currentIcon === '02n' || currentIcon === '03n') {
-        backgroundVideo.setAttribute('src', 'videos/nightThickClouds.mp4');
+        backgroundVideo.setAttribute('src', '../videos/nightThickClouds.mp4');
     } else if ((currentIcon === '04d') && (description === 'broken clouds')) {
-        backgroundVideo.setAttribute('src', 'videos/dayThickClouds.mp4');
+        backgroundVideo.setAttribute('src', '../videos/dayThickClouds.mp4');
     } else if (currentIcon === '04n' && description === 'broken clouds') {
-        backgroundVideo.setAttribute('src', 'videos/nightThickClouds.mp4');
+        backgroundVideo.setAttribute('src', '../videos/nightThickClouds.mp4');
     } else if ((currentIcon === '04d' || currentIcon === '04n') && description === 'overcast clouds') {
-        backgroundVideo.setAttribute('src', 'videos/darkClouds.mp4');
+        backgroundVideo.setAttribute('src', '../videos/darkClouds.mp4');
     } else if ((currentIcon === '09d' || currentIcon === '10d') && lightResult) {
-        backgroundVideo.setAttribute('src', 'videos/raindrops.mp4');
+        backgroundVideo.setAttribute('src', '../videos/raindrops.mp4');
     } else if ((currentIcon === '09n' || currentIcon === '10n') && lightResult) {
-        backgroundVideo.setAttribute('src', 'videos/nightWindowRain.mp4');
+        backgroundVideo.setAttribute('src', '../videos/nightWindowRain.mp4');
     } else if ((currentIcon === '09d' || currentIcon === '10d') && heavyResult) {
-        backgroundVideo.setAttribute('src', 'videos/heavyRainDay.mp4');
+        backgroundVideo.setAttribute('src', '../videos/heavyRainDay.mp4');
     } else if ((currentIcon === '09n' || currentIcon === '10n') && heavyResult) {
-        backgroundVideo.setAttribute('src', 'videos/nightWindowRain.mp4');
+        backgroundVideo.setAttribute('src', '../videos/nightWindowRain.mp4');
     } else if (currentIcon === '11d' || currentIcon === '11n'){
-        backgroundVideo.setAttribute('src', 'videos/lightningV2.mp4');
+        backgroundVideo.setAttribute('src', '../videos/lightningV2.mp4');
     } else if (currentIcon === '13d'){
-        backgroundVideo.setAttribute('src', 'videos/daySnow.mp4');
+        backgroundVideo.setAttribute('src', '../videos/daySnow.mp4');
     } else if (currentIcon === '13n'){
-        backgroundVideo.setAttribute('src', 'videos/nightSnow.mp4');
+        backgroundVideo.setAttribute('src', '../videos/nightSnow.mp4');
     } else {
-        backgroundVideo.setAttribute('src', 'videos/darkClouds.mp4');
+        backgroundVideo.setAttribute('src', '../videos/darkClouds.mp4');
     }
 }
 
@@ -724,7 +715,6 @@ let offsetTIme;
 const timeZoneOffset = (timeZone) =>{
     let date = new Date().toLocaleString('en', {timeZone, timeZoneName: 'short'}).split(' ');
     let timeZoneName = date[date.length - 1];
-    console.log(date);
 
     let grabOnlyLetters = /\W+\d+/; 
     let grabTimezoneAbbreviation = /\s\(UTC\D[0-9]+:D00\)$/;
@@ -733,7 +723,6 @@ const timeZoneOffset = (timeZone) =>{
 
     let rawTZAbbreviation = timeZoneName.replace(grabOnlyLetters, '');
     
-    // This either grabs the offset from the response or the array
     for (let i = 0; i < myTimezoneArray.length; ++i) {
         let currentTZ = myTimezoneArray[i];
         let tzAbbreviation = currentTZ.replace(grabTimezoneAbbreviation, '');
