@@ -1,4 +1,3 @@
-///This section changes the color of the nav elements
 let sections = document.querySelectorAll('section');
 let navLi = document.querySelectorAll('nav .ulContainer ul li a');
 let divList = document.querySelectorAll('section .divBar')
@@ -34,6 +33,38 @@ window.addEventListener('scroll', ()=> {
         }
     })
 })
+
+const spicyAnimation = () =>{
+    const text = document.querySelector('.about1');
+    const strText = text.textContent;
+    const splitText = strText.split("");
+    text.textContent = "";
+
+    for(let i = 0; i < splitText.length; i++) {
+        if (splitText[i] === " ") {
+            text.innerHTML += "<span>" + "&nbsp" + "</span>";
+            continue;
+        }
+        text.innerHTML += "<span>" + splitText[i] + "</span>";
+    }
+
+    let char = 0;
+    let timer = setInterval(onTick, 50);
+    
+    function onTick() {
+        const span = text.querySelectorAll('span')[char];
+        span.classList.add('fade');
+        char++
+        if (char === splitText.length){
+            complete();
+            return;
+        }
+    }
+    function complete () {
+        clearInterval(timer);
+        timer = null;
+    }
+}
 
 // Sticky nav event listener
 const nav_links = document.querySelector('.nav_links');
@@ -197,7 +228,7 @@ let doubleWordCities = ["New York","New Hope","Ft. Valley","Ft. Drum","El Segund
 ,"Shaker Heights","Fairfield Beach","Hallandale Beach","Oakland Park","Hyde Park","Sioux City","Pembroke Pines","Pembroke Park"
 ,"Lake George","South Miami","West Miami","Delray Beach","Cocoa Beach","Longboat Key","Key West","Key Largo","New Trier"
 ,"Forest Hills","Hollywood Hills","Santa Monica","Kew Gardens","Ft. Lauderdale","Deerfield Beach","New Paltz","San Diego"
-,"San Jose", "San Antonio"];
+,"San Jose", "San Antonio", "West Linn"];
 
 //Submit listener for the searchbar on the weather app
 submit.addEventListener('click', function (e){
@@ -376,6 +407,7 @@ window.onload = function() {
     lon = 122.6784;
     onecall(lat, lon);
     reverseGeocode(lat, lon);
+    spicyAnimation();
 };
 ////////////////////////////
 searchBar.addEventListener("keyup", function(e) {
@@ -460,23 +492,23 @@ const showData = (data) => {
     //changes the icons depending on the weather conditions
     let iconList = (icon) => {
         if (icon === '01d') {
-            iconSrc = `../pictures/003-sun.png`
+            iconSrc = `./pictures/003-sun.png`
         } else if (icon === '01n') {
-            iconSrc = '../pictures/night.png'
+            iconSrc = './pictures/009-night.png'
         } else if (icon === '02n' || icon === '03n') {
-            iconSrc = '../pictures/cloudyMoon.png'
+            iconSrc = './pictures/cloudyMoon.png'
         } else if (icon ==='02d' || icon === '03d') {
-            iconSrc = '../pictures/002-cloudy.png'
+            iconSrc = './pictures/002-cloudy.png'
         } else if (icon === '09d' || icon === '09n') {
-            iconSrc = '../pictures/001-rain.png'
+            iconSrc = './pictures/001-rain.png'
         } else if (icon === '10d' || icon === '10n') {
-            iconSrc = `../pictures/006-rain.png`
+            iconSrc = `./pictures/006-rain.png`
         } else if (icon === '11d' || icon === '11n') {
-            iconSrc = `../pictures/004-storm.png`
+            iconSrc = `./pictures/004-storm.png`
         }  else if (icon === '13d' || icon === '13n') {
-            iconSrc = `../pictures/008-snowing.png`
+            iconSrc = `./pictures/008-snowing.png`
         } else {
-            iconSrc = '../pictures/011-clouds.png'
+            iconSrc = './pictures/011-clouds.png'
         }
     }
     //This is the hourly section
@@ -501,13 +533,13 @@ const showData = (data) => {
         time = hourlyDateObj.toLocaleString("en-US", {hour: "numeric"});
         while(counter < 12 && hourTime > dt) {
             hourlyForecast +=
-                `<div class='forecast_weather_class'>
+                `<div class='forecast_weather_class textLeft white'>
                     <div class='increaseFont'>${time}</div>
-                    <div class='weather_image'><img id='icon2' class='icon2 changeIconSize' src=${iconSrc}></div>
-                    <div class='weather_item alignLeft weatherDescription'>${hour.weather[0].description.charAt(0).toUpperCase() + hour.weather[0].description.slice(1)}</div>
+                    <div class='weather_image textLeft'><img id='icon2' class='icon2 changeIconSize' src=${iconSrc}></div>
+                    <div class='weather_item justifyLeft fullWidth weatherDescription'>${hour.weather[0].description.charAt(0).toUpperCase() + hour.weather[0].description.slice(1)}</div>
                     <div class='weather_class_container'>
-                        <div class='weather_class alignLeft'>
-                            <div class='weather_item increaseFont alignLeft'>${Math.round(hour.temp) + '\u00B0F'}</div>
+                        <div class='weather_class justifyLeft fullWidth'>
+                            <div class='weather_item increaseFont justifyLeft fullWidth'>${Math.round(hour.temp) + '\u00B0F'}</div>
                         </div>
                     </div>
                 </div>`;
@@ -531,12 +563,12 @@ const showData = (data) => {
             return counter2++;
         } else {
             dailyForecast += 
-            `<div class='forecast_weather_class alignLeft'>
+            `<div class='forecast_weather_class textLeft white justifyLeft fullWidth'>
                 <div class='increaseFont'>${time}</div>
-                <div class='weather_image'><img id='icon2' class='icon2 changeIconSize' src=${iconSrc}></div>
+                <div class='weather_image textLeft'><img id='icon2' class='icon2 changeIconSize' src=${iconSrc}></div>
                 <div class='weather_item weatherDescription'>${day.weather[0].description.charAt(0).toUpperCase() + day.weather[0].description.slice(1)}</div>
                 <div class='weather_class_container'>
-                    <div class='weather_class alignLeft'>
+                    <div class='weather_class justifyLeft fullWidth'>
                         <div class='weather_item increaseTempFont '>${Math.round(day.temp.max) + '\u00B0F'}</div>
                         <div class='weather_item decreaseTempFont '>${Math.round(day.temp.min) + '\u00B0F'}</div>
                     </div>
@@ -552,7 +584,7 @@ const nameSpot = (data) => {
     let cityName = document.querySelector('.cityName');    
     let {city} = data;
     cityName.innerHTML = `
-    <h2 class='cityName'>${city}</h2>
+    <h2 class='cityName textLeft fullWidth white'>${city}</h2>
     `
 }
 // This also adds the name of the city to the page
@@ -560,7 +592,7 @@ const addCityName = (name) => {
     let cityName = document.querySelector('.cityName'); 
     let city = name;
     cityName.innerHTML = `
-    <h2 class='cityName'>${city}</h2>
+    <h2 class='cityName textLeft fullWidth white'>${city}</h2>
     `
 }
 
@@ -576,35 +608,35 @@ let changeBackground = (currentIcon, description) => {
     const heavyResult = heavyRainTerms.some(term => description.includes(term))
 
     if (currentIcon === '01d') {
-        backgroundVideo.setAttribute('src', '../videos/sunnyDay.mp4');
+        backgroundVideo.setAttribute('src', './videos/sunnyDay.mp4');
     } else if (currentIcon === '01n') {
-        backgroundVideo.setAttribute('src', '../videos/clearNight.mp4');
+        backgroundVideo.setAttribute('src', './videos/clearNight.mp4');
     } else if (currentIcon === '02d' || currentIcon === '03d') {
-        backgroundVideo.setAttribute('src', '../videos/lightlyCloudy.mp4');
+        backgroundVideo.setAttribute('src', './videos/lightlyCloudy.mp4');
     } else if (currentIcon === '02n' || currentIcon === '03n') {
-        backgroundVideo.setAttribute('src', '../videos/nightThickClouds.mp4');
+        backgroundVideo.setAttribute('src', './videos/nightThickClouds.mp4');
     } else if ((currentIcon === '04d') && (description === 'broken clouds')) {
-        backgroundVideo.setAttribute('src', '../videos/dayThickClouds.mp4');
+        backgroundVideo.setAttribute('src', './videos/dayThickClouds.mp4');
     } else if (currentIcon === '04n' && description === 'broken clouds') {
-        backgroundVideo.setAttribute('src', '../videos/nightThickClouds.mp4');
+        backgroundVideo.setAttribute('src', './videos/nightThickClouds.mp4');
     } else if ((currentIcon === '04d' || currentIcon === '04n') && description === 'overcast clouds') {
-        backgroundVideo.setAttribute('src', '../videos/darkClouds.mp4');
+        backgroundVideo.setAttribute('src', './videos/darkClouds.mp4');
     } else if ((currentIcon === '09d' || currentIcon === '10d') && lightResult) {
-        backgroundVideo.setAttribute('src', '../videos/raindrops.mp4');
+        backgroundVideo.setAttribute('src', './videos/raindrops.mp4');
     } else if ((currentIcon === '09n' || currentIcon === '10n') && lightResult) {
-        backgroundVideo.setAttribute('src', '../videos/nightWindowRain.mp4');
+        backgroundVideo.setAttribute('src', './videos/nightWindowRain.mp4');
     } else if ((currentIcon === '09d' || currentIcon === '10d') && heavyResult) {
-        backgroundVideo.setAttribute('src', '../videos/heavyRainDay.mp4');
+        backgroundVideo.setAttribute('src', './videos/heavyRainDay.mp4');
     } else if ((currentIcon === '09n' || currentIcon === '10n') && heavyResult) {
-        backgroundVideo.setAttribute('src', '../videos/nightWindowRain.mp4');
+        backgroundVideo.setAttribute('src', './videos/nightWindowRain.mp4');
     } else if (currentIcon === '11d' || currentIcon === '11n'){
-        backgroundVideo.setAttribute('src', '../videos/lightningV2.mp4');
+        backgroundVideo.setAttribute('src', './videos/lightningV2.mp4');
     } else if (currentIcon === '13d'){
-        backgroundVideo.setAttribute('src', '../videos/daySnow.mp4');
+        backgroundVideo.setAttribute('src', './videos/daySnow.mp4');
     } else if (currentIcon === '13n'){
-        backgroundVideo.setAttribute('src', '../videos/nightSnow.mp4');
+        backgroundVideo.setAttribute('src', './videos/nightSnow.mp4');
     } else {
-        backgroundVideo.setAttribute('src', '../videos/darkClouds.mp4');
+        backgroundVideo.setAttribute('src', './videos/darkClouds.mp4');
     }
 }
 
