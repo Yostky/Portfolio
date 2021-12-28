@@ -16,10 +16,9 @@
 <body>
     <section id='home'>
         <header class="home">
-            <nav class='nav_links'>
+            <nav class='nav_links fullWidth black_background'>
                 <div class='ulContainer'>
                     <ul class='redirects'>
-                        <!-- <li><a href='#home' class='home edit'>Home</a></li> -->
                         <li><a href='#about' class='about'>About</a></li>
                         <li><a href='#projects' class='projects'>Projects</a></li>
                         <li><a href='#contact' class='contact'>Contact</a></li>
@@ -28,8 +27,7 @@
             </nav>
             <i class="fas fa-bars"></i>
             <div class="dropdown">
-                <div class="dropdown-content burgerAnimation">
-                    <!-- <a href="#home" class='home edit dropDownLink1'><b>Home</b></a> -->
+                <div class="dropdown-content fullWidth burgerAnimation">
                     <a href="#about" class='about dropDownLink2'><b>About</b></a>
                     <a href="#projects" class='projects dropDownLink3'><b>Projects</b></a>
                     <a href="#contact" class='contact dropDownLink4'><b>Contact</b></a>
@@ -37,298 +35,134 @@
             </div> 
         </header>
     </section>
-    <section id='about' class="sectioner" >
+    <section id='about' class="sectioner fullWidth" >
         <div class='about'>
-            <h1 class='about1'>ABOUT ME</h1>
+            <h1 class='about1 alignCenter black'>ABOUT ME</h1>
         </div>
-        <div class='aboutDiv'></div>
-        <div class='icons'>
-            <div class='icon'>
-                <img src="https://img.icons8.com/color/120/000000/html-5--v1.png"/>
-                <figcaption>HTML5</figcaption> 
-            </div>
-            <div class='icon'> 
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                    width="120" height="144"
-                    viewBox="0 0 172 172"
-                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M21.5,150.5v-129h129v129z" fill="#ffd600"></path><path d="M105.8445,118.06008c2.47967,4.02767 5.17433,7.88692 10.88258,7.88692c4.7945,0 7.31,-2.38292 7.31,-5.67958c0,-3.94525 -2.6015,-5.34633 -7.87617,-7.64325l-2.89175,-1.23267c-8.34558,-3.54033 -13.89617,-7.9765 -13.89617,-17.34692c0,-8.63583 6.61125,-15.20767 16.942,-15.20767c7.35658,0 12.642,2.54775 16.45467,9.21992l-9.0085,5.75842c-1.98158,-3.54033 -4.12442,-4.93425 -7.44617,-4.93425c-3.38983,0 -5.53625,2.13925 -5.53625,4.93425c0,3.45433 2.15,4.85183 7.11292,6.99108l2.89175,1.23267c9.83625,4.18892 15.38325,8.46742 15.38325,18.08508c0,10.363 -8.18433,16.04258 -19.17083,16.04258c-10.74642,0 -16.84883,-5.39292 -20.24583,-12.06867zM64.328,118.35392c1.81317,3.2465 4.56875,5.74408 8.53192,5.74408c3.79117,0 5.97342,-1.49783 5.97342,-7.32075v-37.94392h11.94325v39.77858c0,12.06508 -6.99825,17.55475 -17.21792,17.55475c-9.23425,0 -15.89925,-6.2565 -18.61542,-12.06867z" fill="#ffffff"></path></g></g></svg>
-                <figcaption class='jsFig'>Javascript</figcaption>
-            </div>
-            <div class='icon'>
-                <img src="https://img.icons8.com/color/120/000000/css3.png"/>
-                <figcaption>CSS3</figcaption>
-            </div>
-        </div>
-        <div class="bio">
-            <div class="container">
-                <img class="portrait" width="200" height="150" src="https://d.newsweek.com/en/full/822411/pikachu-640x360-pokemon-anime.jpg?w=1600&h=1200&q=88&f=3ed1c0d6e3890cbc58be90f05908a8f5">
-                <p>Hello there!</p>
-                <p>My name is Kyle Yost, and I am self taught in computer programming.</p>
-                    
-                <p> 
-                    For most of my life, I wanted to be a Physical Therapist because of my fascination with the structure and capabilities of the human body. Once I graduated college with Bachelors in Kinesiology, 
-                    I was realised that my passion for the human body did not outweight the decades of crippling debt that 
-                    gradute school would force upon me. So, I was faced with a life changing decision - what do I do now?
-                </p>  
-                <p>
-                    For the past year of my life, I have dedicated myself to learn the structure and capabilties of HTML, CSS, and Javascript. I chose these languages
-                    because I thought they would be easy to start with and because front-end engineering was very interesting to me.
-                    Now that I am a year into this, I feel like I have the necessary skills and understanding to become a software engineer. 
-                </p>          
+        <div class='aboutDiv black_background'></div>
+
+        <div class="bio black">
+            <div class="alignCenter fullWidth flex skillsWrapper">
+                <div class="fullWidth bioDiv">
+                    <p class="bioFont textLeft">Hello, my name is Kyle and I am a self-taught software developer.</p>
+                    <p class="bioFont textLeft">I specialize in front-end development and I am most comfortable using React and Bootstrap to complete projects.
+                        I have been teaching myself how to program for almost a year now, so I have a good understanding of Javascript and React and how to use these languages to create applications.
+                    </p>
+                </div>
+                <div class="fullWidth bioDiv marginTop">
+                    <div class="skillsArea bioDiv">
+                        <h1 class="xlFont">Skills</h1>
+                    </div>
+                    <div class="skillsArea bioDiv flex black_background blueBorder">
+                        <div class="bioDiv textLeft">
+                            <p class="blue lrgFont">REACT</p>
+                            <p class="blue lrgFont">JAVASCRIPT</p>
+                            <p class="blue lrgFont">BOOTSTRAP</p>
+                            <p class="blue lrgFont">CSS</p>
+                            <p class="blue lrgFont">HTML</p>
+                            <p class="blue lrgFont">GIT</p>
+                            <p class="blue lrgFont">GITHUB</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <section id="projects" class="projects sectioner">
+    <section id="projects" class="projects sectioner fullWidth">
         <div class='projects'>
-            <h1 class='projects darkH1'>PROJECTS</h1>
+            <h1 class='projects darkH1 alignCenter black'>PROJECTS</h1>
         </div>
-        <div class='divBar projects '></div>
-        <div class='container weather-app-container'>
-            <video class='backgroundVideo' autoplay loop muted ><source src="#" type="video/mp4"></video>
-                <div class='current_weather_container'>
+        <div class='divBar black_background projects '></div>
+        <div class='container alignCenter fullWidth weather-app-container'>
+            <video class='backgroundVideo fullWidth' autoplay loop muted ><source src="#" type="video/mp4"></video>
+                <div class='current_weather_container fullWidth'>
                     <div class='submitDiv'>
-                        <i class="fas fa-search weatherSubmit"></i>
-                        <input class='inputValue' type='text' placeholder="Enter city and state, or zip code" required>
+                        <i class="fas fa-search weatherSubmit white"></i>
+                        <input class='inputValue white' type='text' placeholder="Enter city and state, or zip code" required>
                     </div>
                     <div class='current_date_container'>
-                        <div class="cityName">
+                        <div class="cityName textLeft fullWidth white">
                             <h2>City Name</h2>
                         </div>
-                        <div class='current_date'>Date</div>
+                        <div class='current_date textLeft fullWidth white'>Date</div>
                     </div>
-                    <div class='current_weather'>
-                        <div class='current_data moveLeft'>
-                            <div class='weather_class current_temp_container'>
-                                <div class='current_weather_item current_temp'>Temp</div>
+                    <div class='current_weather white'>
+                        <div class='current_data fullWidth moveLeft'>
+                            <div class='weather_class fullWidth current_temp_container'>
+                                <div class='current_weather_item fullWidth current_temp'>Temp</div>
                             </div>
                             <div class='weather_class'>
-                                <div class='current_weather_item current_description'>Description</div>
+                                <div class='current_weather_item fullWidth current_description'>Description</div>
                             </div>
                         </div>
-                        <div class='current_data hide'>
-                            <div class='current_weather_class'>
+                        <div class='current_data fullWidth hide'>
+                            <div class='current_weather_class fullWidth'>
                                 <div class='current_sunset weather_item'>Sunset</div>
                             </div>
-                            <div class='current_weather_class'>
+                            <div class='current_weather_class fullWidth'>
                                 <div class='current_humidity weather_item'>Humidity</div>
                             </div>
-                            <div class='current_weather_class'>
+                            <div class='current_weather_class fullWidth'>
                                 <div class='current_high weather_item'>High</div>
                             </div>
                         </div>
-                        <div class='current_data hide'>
-                            <div class='current_weather_class'>
+                        <div class='current_data fullWidth hide'>
+                            <div class='current_weather_class fullWidth'>
                                 <div class='current_sunrise weather_item'>Sunrise</div>
                             </div>
-                            <div class='current_weather_class'>
+                            <div class='current_weather_class fullWidth'>
                                 <div class='current_wind weather_item'>Wind</div>
                             </div>
-                            <div class='current_weather_class'>
+                            <div class='current_weather_class fullWidth'>
                                 <div class='current_low weather_item'>Low</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--------------------------------------------------->
-                <div class='hourly'>Hourly</div>
+                <div class='hourly textLeft fullWidth white'>Hourly</div>
                 <div class='slider_container1'>
-                    <div class='forecast_weather slider1'>
-                        <div class='forecast_weather top innerSlider1'>
-                            <div class='forecast_weather_class'>
-                                <div class='increaseFont'>Hour</div>
-                                <div class='weather_image'><img class='icon2' src="#"></div>
-                                <div class='weather_item'>Cloudy</div>
-                                <div class='weather_class_container'>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>High</div>
-                                        <div class='weather_item'>81</div>
-                                    </div>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>Low</div>
-                                        <div class='weather_item'>52</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='forecast_weather_class'>
-                                <div>Hour</div>
-                                <div class='weather_image'><img class='icon2' src="#"></div>
-                                <div class='weather_item'>Cloudy</div>
-                                <div class='weather_class_container'>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>High</div>
-                                        <div class='weather_item'>81</div>
-                                    </div>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>Low</div>
-                                        <div class='weather_item'>52</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='forecast_weather_class'>
-                                <div>Hour</div>
-                                <div class='weather_image'><img class='icon2' src="#"></div>
-                                <div class='weather_item'>Cloudy</div>
-                                <div class='weather_class_container'>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>High</div>
-                                        <div class='weather_item'>81</div>
-                                    </div>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>Low</div>
-                                        <div class='weather_item'>52</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='forecast_weather_class'>
-                                <div>Hour</div>
-                                <div class='weather_image'><img class='icon2' src="#"></div>
-                                <div class='weather_item'>Cloudy</div>
-                                <div class='weather_class_container'>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>High</div>
-                                        <div class='weather_item'>81</div>
-                                    </div>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>Low</div>
-                                        <div class='weather_item'>52</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='forecast_weather_class'>
-                                <div>Hour</div>
-                                <div class='weather_image'><img class='icon2' src="#"></div>
-                                <div class='weather_item'>Cloudy</div>
-                                <div class='weather_class_container'>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>High</div>
-                                        <div class='weather_item'>81</div>
-                                    </div>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>Low</div>
-                                        <div class='weather_item'>52</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>           
+                    <div class='forecast_weather alignCenter slider1'>
+                        <div class='forecast_weather alignCenter top innerSlider1'></div>           
                     </div>
                 </div>
-               
-                <!-------------------------------------------------->
-                <div class='daily'>Daily</div>
+                <div class='daily textLeft fullWidth white'>Daily</div>
                 <div class='slider_container2'>
-                    <div class='forecast_weather slider2'>
-                        <div class='forecast_weather bottom innerSlider2'>
-                            <div class='forecast_weather_class'>
-                                <div>Date</div>
-                                <div class='weather_image'><img id='icon2' class='icon2' src="#"></div>
-                                <div class='weather_item'>Cloudy</div>
-                                <div class='weather_class_container'>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>High</div>
-                                        <div class='weather_item'>81</div>
-                                    </div>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>Low</div>
-                                        <div class='weather_item'>52</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='forecast_weather_class'>
-                                <div>Date</div>
-                                <div class='weather_image'><img id='icon2' class='icon2' src="#"></div>
-                                <div class='weather_item'>Cloudy</div>
-                                <div class='weather_class_container'>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>High</div>
-                                        <div class='weather_item'>81</div>
-                                    </div>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>Low</div>
-                                        <div class='weather_item'>52</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='forecast_weather_class'>
-                                <div>Date</div>
-                                <div class='weather_image'><img id='icon2' class='icon2' src="#"></div>
-                                <div class='weather_item'>Cloudy</div>
-                                <div class='weather_class_container'>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>High</div>
-                                        <div class='weather_item'>81</div>
-                                    </div>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>Low</div>
-                                        <div class='weather_item'>52</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='forecast_weather_class'>
-                                <div>Date</div>
-                                <div class='weather_image'><img id='icon2' class='icon2' src="#"></div>
-                                <div class='weather_item'>Cloudy</div>
-                                <div class='weather_class_container'>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>High</div>
-                                        <div class='weather_item'>81</div>
-                                    </div>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>Low</div>
-                                        <div class='weather_item'>52</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='forecast_weather_class'>
-                                <div>Date</div>
-                                <div class='weather_image'><img id='icon2' class='icon2' src="#"></div>
-                                <div class='weather_item'>Cloudy</div>
-                                <div class='weather_class_container'>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>High</div>
-                                        <div class='weather_item'>81</div>
-                                    </div>
-                                    <div class='weather_class'>
-                                        <div class='weather_item'>Low</div>
-                                        <div class='weather_item'>52</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class='forecast_weather alignCenter slider2'>
+                        <div class='forecast_weather alignCenter bottom innerSlider2'></div>
                     </div>
                 </div>
                 
             </div>
         </div>
-        <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik, </a><a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware, </a> <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev, </a> and <a href="https://www.flaticon.com/authors/surang" title="surang">surang</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div class="tinyText">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik, </a><a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware, </a> <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev, </a> and <a href="https://www.flaticon.com/authors/surang" title="surang">surang</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
         <div>
-            <H3>Weather App</H3>
-            <p>This weather app is built with all free resourses, and is coded with HTML, CSS, and vanilla Javascript. 
-                This project taught me about API calls, event listeners, regular expressions, and how Javascript 
-                is able to manipulate HTML and CSS. Working on this app also taught me the importance of clean code,
-                as I found it very difficult to navigate lines of code that is poorly organized and clumped together.
+            <p class="bioFont textLeft">This weather app is built with all free resourses, and is coded with HTML, CSS, and vanilla Javascript. 
+                This app has the capability to display cities with the current and forecasted weather conditions. For every 
+                location displayed, there is a high definition background video, a current condition section, and beautiful weather icons for the
+                 hourly forecast and daily forecast. A major limitation for this application is the fact that all of the data is coming from free resources with incomplete databases, 
+                 meaning that some locations won't display the weather.
             </p>
         </div>
     </section>
-    <section id="contact" class="sectioner">
+    <section id="contact" class="sectioner fullWidth">
         <div class='contact'>
-            <h1 id='white' class='contact'>CONTACT ME</h1>
+            <h1 id='white' class='contact white'>CONTACT ME</h1>
         </div>
-        <div id='white-bar' class='divBar contact'></div>
+        <div id='white-bar' class='divBar black_background contact'></div>
         <form id='container-contact-form' method="POST" action="https://formsubmit.co/yostky@gmail.com">
             <div id='container-area'>
-                <input placeholder="Name" class="name-email" type="text" name="name" required>
-                <input placeholder="Email" class="name-email" type="text" name="email" required>
+                <input placeholder="Name" class="name-email fullWidth white" type="text" name="name" required>
+                <input placeholder="Email" class="name-email fullWidth white" type="text" name="email" required>
                 <textarea placeholder="Your Message" type="text" name="message"></textarea>
                 <input placeholder="SUBMIT" class='button' id="submit" type="submit" value="submit">
             </div>
             <div id='status'></div>
         </form>
     </section>
-    <footer class="sectioner">
-        <div class='socials'>
-            <a href="https://www.linkedin.com/in/kyle-yost-8a222b1a2/"><i href="#" id='linkedin' class="fa fa-linkedin"></i></a>
-            <a href='https://github.com/Yostky'><i href="#" id='github' class="fa fa-github"></i></a>
+    <footer class="sectioner fullWidth">
+        <div class='socials white'>
+            <a href="https://www.linkedin.com/in/kyle-yost-8a222b1a2/"><i href="#" id='linkedin' class="fa fa-linkedin white"></i></a>
+            <a href='https://github.com/Yostky'><i href="#" id='github' class="fa fa-github white"></i></a>
         </div>
     </footer>
     <script src="index.js"></script>
