@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Newsreader', sans-serif;
+    font-family: 'Newsreader', Arial, Helvetica, sans-serif;
 }
-
+/*just finished with the textLeft class*/
 body {
     width: 100%;
     background-color: white;
@@ -14,19 +14,68 @@ footer {
     background-color: rgb(7, 7, 7);
 }
 
+.white {
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+.blue {
+    color: #00d4ff;
+}
+
+.black_background {
+    background-color: black;
+}
+
+.fullWidth {
+    width: 100%;
+}
+.textLeft {
+    text-align: left;
+}
+.alignCenter {
+    text-align: center;
+}
+.flex {
+    display: flex;
+}
+.bioDiv {
+    margin: auto;
+}
+.blueBorder{
+    border: #00d4ff 2px solid;
+}
+.lrgFont {
+    font-weight: bold;
+    font-size: x-large;
+}
+.xlFont{
+    font-size: 2rem;
+}
+.bioFont {
+    font-size: 1.5rem;
+}
+
+.marginTop {
+    margin-top: 4rem;
+}
+.tinyText {
+    font-size: xx-small;
+}
 
 .nav_links {
     position: absolute;
     display: flex;
     justify-content: space-between;
-    background-color: black;
-    width: 100%;
     z-index: 3;
-    border-bottom: solid 4px #007bb5;
+    border-bottom: solid 4px #00d4ff;
 }
 
 nav .ulContainer ul li a.edit{
-    color: #007bb5;
+    color: #00d4ff;
     transition: all 1.5s;
 }
 
@@ -43,7 +92,7 @@ nav .ulContainer ul li a.edit{
     z-index: 55;
     right: 5px;
     top: 4px;
-    color: #007bb5;
+    color: #00d4ff;
     display: none;
 }
 
@@ -54,12 +103,11 @@ nav .ulContainer ul li a.edit{
 .dropdown-content {
     display: block;
     background-color: rgb(54, 54, 54);
-    height: 260px;
+    height: 200px;
     position: fixed;
     z-index: 50;
     top: 0;
     left: 0;
-    width: 100%;
 }
 
 .dropdown-content a{
@@ -69,7 +117,7 @@ nav .ulContainer ul li a.edit{
     font-size: 25px;
     display: block;
     width: 100%;
-    color: #007bb5;
+    color: #00d4ff;
 }
 
 .burgerAnimation {
@@ -99,7 +147,7 @@ nav .ulContainer ul li a.edit{
     height: 2px;
     width: 0;
     display: block;
-    background-color: #007bb5;
+    background-color: #00d4ff;
 }
 
 .redirects a:hover {
@@ -110,42 +158,30 @@ nav .ulContainer ul li a.edit{
     width: 100%;
     transition: .3s;
 }
-/*This section is for the animations*/
-#canvas1 {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(gray, black);
-}
 
 .sectioner {
     padding-right: 5%;
     padding-left: 5%;
-    width: 100%;
     position: relative;
 }
 
 .darkH1 {
-    color: black;
-    text-align: center;
     letter-spacing: 3px;
     font-size: 50px;
     padding: 150px 75px 15px 75px;
     opacity: 0;
 }
 .about1 {
-    color: black;
-    text-align: center;
     letter-spacing: 3px;
     font-size: 50px;
     padding: 8rem 75px 15px 75px;
     opacity: 1;
 }
 .aboutDiv {
-    background-color: black;
     height: 5px;
     width: 10%;
     margin: auto;
-    margin-bottom: 35px;
+    margin-bottom: 6rem;
     opacity: 1;
 }
 
@@ -161,24 +197,40 @@ nav .ulContainer ul li a.edit{
 }
 
 .divBar {
-    background-color: black;
     height: 5px;
     width: 10%;
     margin: auto;
-    margin-bottom: 35px;
+    margin-bottom: 6rem;
     opacity: 0;
+}
+
+span {
+    opacity: 0;
+    transition: all 1s ease;
+    transform: translateY(50px);
+    display: inline-block;
+}
+
+span.fade {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 p {
     margin: 20px 40px 10px 40px;
     color: black;
-
 }
 
 .bio {
-    color: black;
     margin-top: 5%;
+    margin-bottom: 5%;
+}
 
+.skillsArea {
+    width: 70%;
+}
+.skillsWrapper {
+    justify-content: space-around;
 }
 
 .portrait {
@@ -187,8 +239,6 @@ p {
 }
 
 .container {
-    width: 100%;
-    text-align: center;
     border: black 2px solid;
     font-size: 20px;
     padding: 0 5% 0 5%;
@@ -199,31 +249,26 @@ p {
 }
 
 .icons {
-    width: 100%;
     display: flex;
 }
 
 .icon {
     margin: auto;
-    text-align: center;
 }
 
 figcaption {
-    color: black;
     font-size: 30px;
 }
 /******************** Weather App ****************************************************************/
 .weather-app-container {
-    text-align: center;
     align-content: center;
     border-radius: 5px;
     background-size: cover;
     overflow: hidden;
-    width: 100%;
     height: fit-content ;
     position: relative;
-    max-width: 100%;
-    
+    max-width: 1200px;
+    margin: auto;
 }
 
 .backgroundVideo {
@@ -231,7 +276,6 @@ figcaption {
     top: 0;
     left: 0;
     height: 100%;
-    width: 100%;
     z-index: -5;
     filter: brightness(65%);
     object-fit: fill;
@@ -242,14 +286,10 @@ figcaption {
     padding-top: 45px;
     grid-column: auto;
     margin: auto;
-    width: 100%;
 }
 
 .cityName {
-    width: 100%;
-    text-align: left;
     font-size: 50px;
-    color: white;
 }
 
 .current_date_container{
@@ -257,23 +297,18 @@ figcaption {
     justify-content: left;
 }
 
-.current_date{
-    width: 100%;
-    text-align: left;
+.current_date {
     font-size: 30px;
-    color: white;
 }
 
 .current_weather {
     width: 80%;
-    color: white;
     padding: 0 0 20px 0;
     display: flex;
 }
 
 .current_temp_container {
     font-size: 90px;
-    width: 100%;
     padding-right: 80px;
 }
 .moveLeft {
@@ -281,40 +316,31 @@ figcaption {
 }
 
 .hourly {
-    width: 100%;
-    text-align: left;
     font-size: 25px;
     font-weight: bold;
-    color: rgb(255, 255, 255);
     border-bottom: rgb(211, 211, 211) 1px solid;
     padding-bottom: 3px;
 }
 
 .daily {
-    width: 100%;
-    text-align: left;
     font-size: 25px;
     font-weight: bold;
-    color: rgb(255, 255, 255);
     border-bottom: rgb(211, 211, 211) 1px solid;
     padding: 20px 0 3px 0;
 }
 
 .current_weather_item{
-    width: 100%;
     margin: auto;
 }
 
 .current_data {
     display: table-column;
-    width: 100%;
     margin: auto;
 }
 
 .current_weather_class {
     display: row;
     padding-top: 10px;
-    width: 100%; 
 }
 
 .current_weather_class:first-child {
@@ -331,20 +357,16 @@ figcaption {
 }
 
 .forecast_weather_class{
-    color: white;
     width: 140px;
     min-width: 140px;
     font-size: 16px;
     margin-top: 10px;
     margin-right: 10px;
-    text-align: left;
 }
 
-.alignLeft {
-    text-align: left;
+.justifyLeft {
     justify-content: left;
     left: 0;
-    width: 100%;
 }
 
 .extraPadding {
@@ -387,7 +409,6 @@ figcaption {
     height: 45px;
     font-size: 20px;
     width: 45px;
-    color: rgb(255, 255, 255);
     background-color: rgb(59, 59, 59);
     border-left: rgb(0, 255, 13) 2px solid;
     border-radius: 2px;
@@ -405,7 +426,6 @@ figcaption {
 .inputValue{
     height: 45px;
     width: 45px;
-    color: white;
     background-color: rgb(44, 44, 44);
     font-size: 16px;
     border: none;
@@ -425,7 +445,6 @@ figcaption {
     display: flex;
     margin: auto;
     width: 95%;
-    text-align: center;
     overflow: hidden;
 }
 
@@ -445,7 +464,6 @@ figcaption {
     padding: 0 0 10px 0;
 }
 .weather_image {
-    text-align: left;
     align-content: center;
 }
 
@@ -472,16 +490,11 @@ figcaption {
     overflow-y: scroll;
 }
 
-.appImg {
-    width: 40%;
-    height: auto;
-    text-align: center;
-}
+
 /*Footer area*/
             
 
 #white {
-    color: white;
     text-align: center;
     letter-spacing: 3px;
     font-size: 50px;
@@ -502,6 +515,8 @@ figcaption {
     text-align: center;
     width: 100%;
     border: black solid 2px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 #container-area {
@@ -517,13 +532,11 @@ figcaption {
 }
 
 .name-email {
-    width: 100%;
     height: 35px;
     font-size: 20px;
     background-color: rgb(8, 8, 17);
     border: none;
-    color: white;
-    border: #007bb5 2px solid;
+    border: #00d4ff 2px solid;
 }
 
 #container-area textarea {
@@ -533,7 +546,7 @@ figcaption {
     background-color: rgb(8, 8, 17);
     border: none;
     color: white;
-    border: #007bb5 2px solid;
+    border: #00d4ff 2px solid;
 }
 
 input[type=text], textarea[type=text] {
@@ -547,14 +560,14 @@ textarea[type=text] {
     float: right;
     width: 100px;
     height: 30px;
-    color: #007bb5;
+    color: #00d4ff;
     background-color:black;
-    border: #007bb5 2px solid;
+    border: #00d4ff 2px solid;
     cursor: pointer;
 }
 
 #submit:hover {
-    background-color: #007bb5;
+    background-color: #00d4ff;
     border: white 2px solid;
     color: white;
 }
@@ -565,7 +578,6 @@ textarea[type=text] {
 
 .socials {
     text-align: center;
-    color: white;
 }
 
 .socials i {
@@ -575,7 +587,6 @@ textarea[type=text] {
 }
 
 .fa {
-    color: white;
     text-decoration: none;
     transition: all .5s;
 }
@@ -589,7 +600,7 @@ textarea[type=text] {
 }
 
 #linkedin:hover {
-    background: #007bb5;
+    background: #00d4ff;
     transform: scale(1.1);
 }
 
@@ -601,9 +612,9 @@ textarea[type=text] {
 }
 
 #github:hover {
-    background-color: #007bb5;
+    background-color: #00d4ff;
     transform: scale(1.1);
-    border: #007bb5;
+    border: #00d4ff;
 }
 
 
@@ -636,7 +647,11 @@ textarea[type=text] {
     }
 }
 /*------------------------------------------------------------------------------*/
-
+@media only screen and (min-width: 1500px) {
+    #contact {
+        height: 60rem;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     .nav_links, #canvas1, .current_weather_class, .hide{
@@ -693,7 +708,6 @@ textarea[type=text] {
     .slider_container2, .slider2{
         height: 40vh;
         overflow: scroll;
-
     }
     .current_temp_container {
         font-size: 64px;
@@ -724,6 +738,9 @@ textarea[type=text] {
     .weather_image{
         width: 35px;
         height: 35px;
+    }
+    .skillsWrapper{
+        display: block;
     }
     #white, .darkH1 {
         font-size: 30px;
