@@ -403,8 +403,8 @@ submit.addEventListener('click', function (e){
 })
 
 window.onload = function() {
-    lat = 45.5152;
-    lon = 122.6784;
+    lat = -33.865143;
+    lon = 151.209900;
     onecall(lat, lon);
     reverseGeocode(lat, lon);
     spicyAnimation();
