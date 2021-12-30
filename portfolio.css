@@ -60,6 +60,7 @@ footer {
 }
 .bioFont {
     font-size: 1.5rem;
+    line-height: 2rem;
 }
 
 .marginTop {
@@ -265,7 +266,7 @@ figcaption {
     border-radius: 5px;
     background-size: cover;
     overflow: hidden;
-    height: fit-content ;
+    height: fit-content;
     position: relative;
     max-width: 1200px;
     margin: auto;
