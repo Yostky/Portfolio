@@ -9,7 +9,7 @@ window.addEventListener('scroll', ()=> {
     sections.forEach(section => {
         let height = section.clientHeight;
         let sectionTop = section.offsetTop;
-        if(pageYOffset >= (sectionTop - height / 2)){
+        if(pageYOffset >= (sectionTop - height / 3)){
             current = section.getAttribute('id');
         }
     })
