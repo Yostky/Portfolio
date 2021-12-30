@@ -308,7 +308,7 @@ submit.addEventListener('click', function (e){
         
         const cityAndCountryInfo = (city, countryCode) => {
             console.log(countryCode);
-            fetch(`https://api.weatherstack.com/current?access_key=d07d3fed2029aa9b60a809d203504968&query=${city},${countryCode}`)
+            fetch(`http://api.weatherstack.com/current?access_key=d07d3fed2029aa9b60a809d203504968&query=${city},${countryCode}`)
             .then(response => response.json())
             .then(data => {
                 let {lat, lon} = data.location;
@@ -319,7 +319,7 @@ submit.addEventListener('click', function (e){
         }
 
         const cityAndStateInfo = (city, state, doubleWordedCity) => {
-            fetch(`https://api.weatherstack.com/current?access_key=d07d3fed2029aa9b60a809d203504968&query=${city},${state}`)
+            fetch(`http://api.weatherstack.com/current?access_key=d07d3fed2029aa9b60a809d203504968&query=${city},${state}`)
             .then(response => response.json())
             .then(data => {
                 let {lat, lon} = data.location;
