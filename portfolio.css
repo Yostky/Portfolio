@@ -10,6 +10,10 @@ body {
     background-color: white;
 }
 
+.wrapper {
+   
+}
+
 footer {
     background-color: rgb(7, 7, 7);
 }
@@ -32,6 +36,8 @@ footer {
 
 .fullWidth {
     width: 100%;
+    max-width: 1200px;
+    margin: auto;
 }
 .textLeft {
     text-align: left;
@@ -72,7 +78,6 @@ footer {
 }
 
 .nav_links {
-    position: absolute;
     display: flex;
     justify-content: space-between;
     z-index: 3;
@@ -87,6 +92,8 @@ nav .ulContainer ul li a.edit{
 .navStick {
     position: fixed;
     top: 0;
+    right: 0;
+    left: 0;
     z-index: 99;
 }
 
@@ -168,6 +175,7 @@ nav .ulContainer ul li a.edit{
     padding-right: 5%;
     padding-left: 5%;
     position: relative;
+    max-width: 1200px;
 }
 
 .darkH1 {
