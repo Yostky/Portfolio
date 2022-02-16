@@ -14,170 +14,172 @@
     <title>Kyle's Code</title>
 </head>
 <body>
-    <section id='home'>
-        <header class="home">
-            <nav class='nav_links fullWidth black_background'>
-                <div class='ulContainer'>
-                    <ul class='redirects'>
-                        <li><a href='#about' class='about'>About</a></li>
-                        <li><a href='#projects' class='projects'>Projects</a></li>
-                        <li><a href='#contact' class='contact'>Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <i class="fas fa-bars"></i>
-            <div class="dropdown">
-                <div class="dropdown-content fullWidth burgerAnimation">
-                    <a href="#about" class='about dropDownLink2'><b>About</b></a>
-                    <a href="#projects" class='projects dropDownLink3'><b>Projects</b></a>
-                    <a href="#contact" class='contact dropDownLink4'><b>Contact</b></a>
-                </div>
-            </div> 
-        </header>
-    </section>
-    <section id='about' class="sectioner fullWidth" >
-        <div class='about'>
-            <h1 class='about1 alignCenter black'>ABOUT ME</h1>
-        </div>
-        <div class='divBar aboutDiv border black_background'></div>
-
-        <div class="bio black">
-            <div class="alignCenter fullWidth flex skillsWrapper">
-                <div class="fullWidth marginBottom">
-                    <p class="bioFont textLeft">Hello, my name is Kyle and I am a self-taught software developer.</p>
-                    <p class="bioFont textLeft">I specialize in front-end development and I am most comfortable using React and Bootstrap to complete projects.
-                        I have been teaching myself how to program for almost a year now, so I have a good understanding of Javascript and React and how to use these languages to create applications.
-                    </p>
-                </div>
-                <div class="fullWidth bioDiv">
-                    <div class="bioDiv">
-                        <h1 class="xlFont">Skills</h1>
+    <div class="wrapper">
+        <section id='home'>
+            <header class="home">
+                <nav class='nav_links fullWidth black_background'>
+                    <div class='ulContainer'>
+                        <ul class='redirects'>
+                            <li><a href='#about' class='about'>About</a></li>
+                            <li><a href='#projects' class='projects'>Projects</a></li>
+                            <li><a href='#contact' class='contact'>Contact</a></li>
+                        </ul>
                     </div>
-                    <div class=" bioDiv flex black_background blueBorder">
-                        <div class="bioDiv textLeft">
-                            <p class="blue lrgFont">REACT</p>
-                            <p class="blue lrgFont">JAVASCRIPT</p>
-                            <p class="blue lrgFont">BOOTSTRAP</p>
-                            <p class="blue lrgFont">CSS</p>
-                            <p class="blue lrgFont">HTML</p>
-                            <p class="blue lrgFont">GIT</p>
-                            <p class="blue lrgFont">GITHUB</p>
+                </nav>
+                <i class="fas fa-bars"></i>
+                <div class="dropdown">
+                    <div class="dropdown-content fullWidth burgerAnimation">
+                        <a href="#about" class='about dropDownLink2'><b>About</b></a>
+                        <a href="#projects" class='projects dropDownLink3'><b>Projects</b></a>
+                        <a href="#contact" class='contact dropDownLink4'><b>Contact</b></a>
+                    </div>
+                </div> 
+            </header>
+        </section>
+        <section id='about' class="sectioner fullWidth" >
+            <div class='about'>
+                <h1 class='about1 alignCenter black'>ABOUT ME</h1>
+            </div>
+            <div class='divBar aboutDiv border black_background'></div>
+    
+            <div class="bio black">
+                <div class="alignCenter fullWidth flex skillsWrapper">
+                    <div class="fullWidth marginBottom">
+                        <p class="bioFont textLeft">Hello, my name is Kyle and I am a self-taught software developer.</p>
+                        <p class="bioFont textLeft">I specialize in front-end development and I am most comfortable using React and Bootstrap to complete projects.
+                            I have been teaching myself how to program for almost a year now, so I have a good understanding of Javascript and React and how to use these languages to create applications.
+                        </p>
+                    </div>
+                    <div class="fullWidth bioDiv">
+                        <div class="bioDiv">
+                            <h1 class="xlFont">Skills</h1>
+                        </div>
+                        <div class=" bioDiv flex black_background blueBorder">
+                            <div class="bioDiv textLeft">
+                                <p class="blue lrgFont">REACT</p>
+                                <p class="blue lrgFont">JAVASCRIPT</p>
+                                <p class="blue lrgFont">BOOTSTRAP</p>
+                                <p class="blue lrgFont">CSS</p>
+                                <p class="blue lrgFont">HTML</p>
+                                <p class="blue lrgFont">GIT</p>
+                                <p class="blue lrgFont">GITHUB</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="projects" class="projects sectioner fullWidth">
-        <div class='projects'>
-            <h1 class='projects darkH1 alignCenter black'>PROJECTS</h1>
-        </div>
-        <div class='divBar black_background projects '></div>
-        <div class='container alignCenter fullWidth weather-app-container'>
-            <video class='backgroundVideo fullWidth' autoplay loop muted ><source src="#" type="video/mp4"></video>
-                <div class='current_weather_container fullWidth'>
-                    <div class='submitDiv'>
-                        <i class="fas fa-search weatherSubmit white"></i>
-                        <input class='inputValue white' type='text' placeholder="Enter city and state, or zip code" required>
-                    </div>
-                    <div class='current_date_container'>
-                        <div class="cityName textLeft fullWidth white">
-                            <h2>City Name</h2>
-                        </div>
-                        <div class='current_date textLeft fullWidth white'>Date</div>
-                    </div>
-                    <div class='current_weather white'>
-                        <div class='current_data fullWidth moveLeft'>
-                            <div class='weather_class fullWidth current_temp_container'>
-                                <div class='current_weather_item fullWidth current_temp'>Temp</div>
-                            </div>
-                            <div class='weather_class'>
-                                <div class='current_weather_item fullWidth current_description'>Description</div>
-                            </div>
-                        </div>
-                        <div class='current_data fullWidth hide'>
-                            <div class='current_weather_class fullWidth'>
-                                <div class='current_sunset weather_item'>Sunset</div>
-                            </div>
-                            <div class='current_weather_class fullWidth'>
-                                <div class='current_humidity weather_item'>Humidity</div>
-                            </div>
-                            <div class='current_weather_class fullWidth'>
-                                <div class='current_high weather_item'>High</div>
-                            </div>
-                        </div>
-                        <div class='current_data fullWidth hide'>
-                            <div class='current_weather_class fullWidth'>
-                                <div class='current_sunrise weather_item'>Sunrise</div>
-                            </div>
-                            <div class='current_weather_class fullWidth'>
-                                <div class='current_wind weather_item'>Wind</div>
-                            </div>
-                            <div class='current_weather_class fullWidth'>
-                                <div class='current_low weather_item'>Low</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class='hourly textLeft fullWidth white'>Hourly</div>
-                <div class='slider_container1'>
-                    <div class='forecast_weather alignCenter slider1'>
-                        <div class='forecast_weather alignCenter top innerSlider1'></div>           
-                    </div>
-                </div>
-                <div class='daily textLeft fullWidth white'>Daily</div>
-                <div class='slider_container2'>
-                    <div class='forecast_weather alignCenter slider2'>
-                        <div class='forecast_weather alignCenter bottom innerSlider2'></div>
-                    </div>
-                </div>
-                
+        </section>
+        <section id="projects" class="projects sectioner fullWidth">
+            <div class='projects'>
+                <h1 class='projects darkH1 alignCenter black'>PROJECTS</h1>
             </div>
-        </div>
-        <div class="tinyText">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik, </a><a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware, </a> <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev, </a> and <a href="https://www.flaticon.com/authors/surang" title="surang">surang</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-        <div class="fullWidth marginBottom">
-            <p class="bioFont textLeft">This weather app is built with all free resourses, and is coded with HTML, CSS, and vanilla Javascript. 
-                This app has the capability to display cities with the current and forecasted weather conditions. For every 
-                location displayed, there is a high definition background video, a current condition section, and beautiful weather icons for the
-                 hourly forecast and daily forecast. Each video displayed changes not only for the specific weather condition, but also 
-                 for the time of day whether it be day or night. A major limitation for this application is the fact that all of the data is coming from free resources with incomplete databases, 
-                 meaning that some locations won't display the weather.
-            </p>
-        </div>
-        <div class="alignCenter fullWidth weather-app-container">
-            <a href="https://react-phone-store55.netlify.app/" target="_blank"><img src="./pictures/websitePhoto.png" class="alignCenter fullWidth weather-app-container"></a>
-        </div>
-        <div class="fullWidth marginBottom">
-            <p class="bioFont textLeft ">This ecommerce website is made with React and Bootstrap, and has a Paypal payment option 
-                integrated. The website is fully responsive, includes modals, description pages, 
-                a cart, and some error handling. The website displays three different types of products, prices, descriptions, but since 
-                the products are not purchasable, the Paypal integration is not up and running in the production version. The Paypal portion of 
-                the website can be tested outside of production by using demo accounts from Paypal to simulate the actual payment process. 
-
-            </p>
-        </div>
-    </section>
-    <section id="contact" class="sectioner fullWidth">
-        <div class='contact'>
-            <h1 id='white' class='contact white'>CONTACT ME</h1>
-        </div>
-        <div id='white-bar' class='divBar black_background contact'></div>
-        <form id='container-contact-form' method="POST" action="https://formsubmit.co/yostky@gmail.com">
-            <div id='container-area'>
-                <input placeholder="Name" class="name-email fullWidth white" type="text" name="name" required>
-                <input placeholder="Email" class="name-email fullWidth white" type="text" name="email" required>
-                <textarea placeholder="Your Message" type="text" name="message" required></textarea>
-                <input placeholder="SUBMIT" class='button' id="submit" type="submit" value="submit">
+            <div class='divBar black_background projects '></div>
+            <div class='container alignCenter fullWidth weather-app-container'>
+                <video class='backgroundVideo fullWidth' autoplay loop muted ><source src="#" type="video/mp4"></video>
+                    <div class='current_weather_container fullWidth'>
+                        <div class='submitDiv'>
+                            <i class="fas fa-search weatherSubmit white"></i>
+                            <input class='inputValue white' type='text' placeholder="Enter city and state, or zip code" required>
+                        </div>
+                        <div class='current_date_container'>
+                            <div class="cityName textLeft fullWidth white">
+                                <h2>City Name</h2>
+                            </div>
+                            <div class='current_date textLeft fullWidth white'>Date</div>
+                        </div>
+                        <div class='current_weather white'>
+                            <div class='current_data fullWidth moveLeft'>
+                                <div class='weather_class fullWidth current_temp_container'>
+                                    <div class='current_weather_item fullWidth current_temp'>Temp</div>
+                                </div>
+                                <div class='weather_class'>
+                                    <div class='current_weather_item fullWidth current_description'>Description</div>
+                                </div>
+                            </div>
+                            <div class='current_data fullWidth hide'>
+                                <div class='current_weather_class fullWidth'>
+                                    <div class='current_sunset weather_item'>Sunset</div>
+                                </div>
+                                <div class='current_weather_class fullWidth'>
+                                    <div class='current_humidity weather_item'>Humidity</div>
+                                </div>
+                                <div class='current_weather_class fullWidth'>
+                                    <div class='current_high weather_item'>High</div>
+                                </div>
+                            </div>
+                            <div class='current_data fullWidth hide'>
+                                <div class='current_weather_class fullWidth'>
+                                    <div class='current_sunrise weather_item'>Sunrise</div>
+                                </div>
+                                <div class='current_weather_class fullWidth'>
+                                    <div class='current_wind weather_item'>Wind</div>
+                                </div>
+                                <div class='current_weather_class fullWidth'>
+                                    <div class='current_low weather_item'>Low</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='hourly textLeft fullWidth white'>Hourly</div>
+                    <div class='slider_container1'>
+                        <div class='forecast_weather alignCenter slider1'>
+                            <div class='forecast_weather alignCenter top innerSlider1'></div>           
+                        </div>
+                    </div>
+                    <div class='daily textLeft fullWidth white'>Daily</div>
+                    <div class='slider_container2'>
+                        <div class='forecast_weather alignCenter slider2'>
+                            <div class='forecast_weather alignCenter bottom innerSlider2'></div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
-            <div id='status'></div>
-        </form>
-    </section>
-    <footer class="sectioner fullWidth">
-        <div class='socials white'>
-            <a href="https://www.linkedin.com/in/kyle-yost-8a222b1a2/"><i href="#" id='linkedin' class="fa fa-linkedin white"></i></a>
-            <a href='https://github.com/Yostky'><i href="#" id='github' class="fa fa-github white"></i></a>
-        </div>
-    </footer>
+            <div class="tinyText">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik, </a><a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware, </a> <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev, </a> and <a href="https://www.flaticon.com/authors/surang" title="surang">surang</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <div class="fullWidth marginBottom">
+                <p class="bioFont textLeft">This weather app is built with all free resourses, and is coded with HTML, CSS, and vanilla Javascript. 
+                    This app has the capability to display cities with the current and forecasted weather conditions. For every 
+                    location displayed, there is a high definition background video, a current condition section, and beautiful weather icons for the
+                     hourly forecast and daily forecast. Each video displayed changes not only for the specific weather condition, but also 
+                     for the time of day whether it be day or night. A major limitation for this application is the fact that all of the data is coming from free resources with incomplete databases, 
+                     meaning that some locations won't display the weather.
+                </p>
+            </div>
+            <div class="alignCenter fullWidth weather-app-container">
+                <a href="https://react-phone-store55.netlify.app/" target="_blank"><img src="./pictures/websitePhoto.png" class="alignCenter fullWidth weather-app-container"></a>
+            </div>
+            <div class="fullWidth marginBottom">
+                <p class="bioFont textLeft ">This ecommerce website is made with React and Bootstrap, and has a Paypal payment option 
+                    integrated. The website is fully responsive, includes modals, description pages, 
+                    a cart, and some error handling. The website displays three different types of products, prices, descriptions, but since 
+                    the products are not purchasable, the Paypal integration is not up and running in the production version. The Paypal portion of 
+                    the website can be tested outside of production by using demo accounts from Paypal to simulate the actual payment process. 
+    
+                </p>
+            </div>
+        </section>
+        <section id="contact" class="sectioner fullWidth">
+            <div class='contact'>
+                <h1 id='white' class='contact white'>CONTACT ME</h1>
+            </div>
+            <div id='white-bar' class='divBar black_background contact'></div>
+            <form id='container-contact-form' method="POST" action="https://formsubmit.co/yostky@gmail.com">
+                <div id='container-area'>
+                    <input placeholder="Name" class="name-email fullWidth white" type="text" name="name" required>
+                    <input placeholder="Email" class="name-email fullWidth white" type="text" name="email" required>
+                    <textarea placeholder="Your Message" type="text" name="message" required></textarea>
+                    <input placeholder="SUBMIT" class='button' id="submit" type="submit" value="submit">
+                </div>
+                <div id='status'></div>
+            </form>
+        </section>
+        <footer class="sectioner fullWidth">
+            <div class='socials white'>
+                <a href="https://www.linkedin.com/in/kyle-yost-8a222b1a2/"><i href="#" id='linkedin' class="fa fa-linkedin white"></i></a>
+                <a href='https://github.com/Yostky'><i href="#" id='github' class="fa fa-github white"></i></a>
+            </div>
+        </footer>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
